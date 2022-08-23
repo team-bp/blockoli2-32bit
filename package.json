@@ -1,0 +1,69 @@
+{
+  "name": "blockoli",
+  "version": "2.0.1",
+  "description": "Brockoli is a block coding editor for Arduino.",
+  "main": "main/main.js",
+  "scripts": {
+    "start": "SET \"NODE_ENV=develop\" && electron .",
+    "test": "SET \"NODE_ENV=develop2\" && electron .",
+    "publish": "SET \"NODE_ENV=production\" && electron-builder --win -p always --ia32",
+    "install": "prebuild-install --tag-prefix @serialport/bindings@ || node-gyp rebuild"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/i33W/blockoli2-32bit.git"
+  },
+  "author": {
+    "url": "https://pf.kakao.com/_CBvNxb/chat",
+    "name": "BP LAB",
+    "email": "bpcode@naver.com"
+  },
+  "contributes": {
+    "name": "Hwang bomee",
+    "email": "hwangbomee@kakao.com"
+  },
+  "devDependencies": {
+    "electron": "^16.0.7",
+    "electron-builder": "^22.14.13",
+    "pug": "^3.0.2"
+  },
+  "dependencies": {
+    "@serialport/parser-readline": "^9.2.4",
+    "electron-log": "^4.4.6",
+    "electron-prompt": "^1.7.0",
+    "electron-updater": "^4.3.9",
+    "iconv-lite": "^0.6.3",
+    "ini": "^3.0.0",
+    "object-path": "^0.11.8",
+    "serialport": "^9.2.8"
+  },
+  "build": {
+    "productName": "Blockoli2-32bit-Test",
+    "appId": "com.github.i33w.blockoli2-32bit",
+    "asar": false,
+    "publish": [
+      {
+        "provider": "github",
+        "owner": "i33w",
+        "repo": "blockoli2-32bit"
+      }
+    ],
+    "win": {
+      "target": "nsis",
+      "icon": "./renderer/img/favicon.ico"
+    },
+    "nsis": {
+      "createDesktopShortcut": "always",
+      "oneClick": true,
+      "perMachine": true,
+      "language": 1042,
+      "include": "build/installer-dev.nsh"
+    },
+    "directories": {
+      "output": "./dist/"
+    },
+    "files": [
+      "!.vscode${/*}"
+    ]
+  }
+}
