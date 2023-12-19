@@ -38,7 +38,7 @@
     "serialport": "^9.2.8"
   },
   "build": {
-    "productName": "Blockoli-Coding",
+    "productName": "Blockoli",
     "appId": "com.github.i33w.blockoli2-32bit",
     "asar": false,
     "publish": [
