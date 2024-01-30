@@ -7,6 +7,9 @@
     "start": "SET \"NODE_ENV=develop\" && electron .",
     "test": "SET \"NODE_ENV=develop2\" && electron .",
     "publish": "SET \"NODE_ENV=production\" && electron-builder --win -p always --ia32",
+    "publish2": "SET \"NODE_ENV=production\" && electron-builder --win -p always",
+    "rebuild2": "electron-rebuild --debug",
+    "rebuild3": "electron-builder --win --x64",
     "install": "prebuild-install --tag-prefix @serialport/bindings@ || node-gyp rebuild"
   },
   "repository": {
@@ -29,12 +32,16 @@
   },
   "dependencies": {
     "@serialport/parser-readline": "^9.2.4",
+    "avr8js": "^0.18.11",
     "electron-log": "^4.4.6",
     "electron-prompt": "^1.7.0",
     "electron-updater": "^4.3.9",
     "iconv-lite": "^0.6.3",
     "ini": "^3.0.0",
     "object-path": "^0.11.8",
+    "serialport": "^9.2.8"
+  },
+  "resolutions": {
     "serialport": "^9.2.8"
   },
   "build": {
@@ -57,7 +64,7 @@
       "oneClick": true,
       "perMachine": true,
       "language": 1042,
-      "include": "build/installer.nsh"
+      "include": "installer.nsh"
     },
     "directories": {
       "output": "./dist/"
