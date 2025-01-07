@@ -28,11 +28,15 @@
   "devDependencies": {
     "electron": "^16.0.7",
     "electron-builder": "^22.14.13",
+    "electron-reload": "^2.0.0-alpha.1",
+    "prebuild-install": "^7.1.2",
     "pug": "^3.0.2"
   },
   "dependencies": {
+    "@sentry/electron": "^5.9.0",
     "@serialport/parser-readline": "^9.2.4",
     "avr8js": "^0.18.11",
+    "chokidar": "^4.0.3",
     "electron-log": "^4.4.6",
     "electron-prompt": "^1.7.0",
     "electron-updater": "^4.3.9",
