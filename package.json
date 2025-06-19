@@ -1,6 +1,6 @@
 {
   "name": "blockoli",
-  "version": "2.2.1",
+  "version": "2.3.0",
   "description": "Blockoli is a block coding editor for Arduino.",
   "main": "main/main.js",
   "scripts": {
