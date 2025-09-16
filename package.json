@@ -21,10 +21,6 @@
     "name": "BP LAB",
     "email": "bpcode@naver.com"
   },
-  "contributes": {
-    "name": "Hwang bomee",
-    "email": "hwangbomee@kakao.com"
-  },
   "devDependencies": {
     "electron": "^16.0.7",
     "electron-builder": "^22.14.13",
